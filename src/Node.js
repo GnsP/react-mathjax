@@ -30,6 +30,7 @@ class Node extends React.Component {
   shouldComponentUpdate(nextProps, nextState, nextContext) {
     console.log('MathJax.Node should update ?')
     console.log(nextContext.MathJax !== this.context.MathJax)
+    console.log(nextContext.MathJax)
     return (
       nextProps.children !== this.props.children ||
       nextProps.inline !== this.props.inline ||
