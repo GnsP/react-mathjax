@@ -17,7 +17,8 @@ class Context extends React.Component {
   getChildContext() {
     return {
       MathJax: typeof MathJax === 'undefined' ? undefined : MathJax,
-      input: this.props.input
+      input: this.props.input,
+      loaded: this.state.loaded,
     }
   }
 
@@ -83,7 +84,8 @@ Context.propTypes = {
 
 Context.childContextTypes = {
   MathJax: PropTypes.object,
-  input: PropTypes.string
+  input: PropTypes.string,
+  loaded: PropTypes.bool,
 }
 
 Context.defaultProps = {

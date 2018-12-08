@@ -11,7 +11,7 @@ class Node extends React.Component {
    * Render the math once the node is mounted
    */
   componentDidMount() {
-    this.typeset()
+    if (this.context.Mathjax) this.typeset()
   }
 
   /**
@@ -19,7 +19,7 @@ class Node extends React.Component {
    */
   componentDidUpdate(prevProps) {
     const forceUpdate = prevProps.inline !== this.props.inline || prevProps.children !== this.props.children
-    this.typeset(forceUpdate)
+    if (this.context.Mathjax) this.typeset(forceUpdate)
   }
 
   /**
@@ -28,7 +28,8 @@ class Node extends React.Component {
   shouldComponentUpdate(nextProps, nextState, nextContext) {
     return (
       nextProps.children !== this.props.children ||
-      nextProps.inline !== this.props.inline
+      nextProps.inline !== this.props.inline ||
+      nextContext.Mathjax !== this.context.Mathjax
     )
   }
 
@@ -36,7 +37,7 @@ class Node extends React.Component {
    * Clear the math when unmounting the node
    */
   componentWillUnmount() {
-    this.clear()
+    if (this.context.Mathjax) this.clear()
   }
 
   /**
@@ -104,7 +105,7 @@ class Node extends React.Component {
   }
 
   render() {
-    return React.createElement('span', { ref: 'node' })
+      return this.context.Mathjax ? React.createElement('span', { ref: 'node' }) : <span>{this.props.children}</span>
   }
 }
 
