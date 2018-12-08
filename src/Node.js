@@ -105,7 +105,7 @@ class Node extends React.Component {
   }
 
   render() {
-      return React.createElement('span', { ref: 'node' }, this.props.children)
+      return this.context.MathJax ? React.createElement('span', { ref: 'node' }) : React.createElement('span', { ref: 'node' }, this.props.children)
   }
 }
 
