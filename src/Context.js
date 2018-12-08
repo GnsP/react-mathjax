@@ -48,8 +48,6 @@ class Context extends React.Component {
         this.props.onLoad()
       }
 
-      console.log('MathJax.Context onLoad')
-      console.log(MathJax)
       this.setState({
         loaded: true,
         MathJax

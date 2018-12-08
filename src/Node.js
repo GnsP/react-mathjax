@@ -19,8 +19,6 @@ class Node extends React.Component {
    */
   componentDidUpdate(prevProps) {
     const forceUpdate = prevProps.inline !== this.props.inline || prevProps.children !== this.props.children
-    console.log('MathJax.Node Updated')
-    console.log(!!this.context.MathJax)
     if (this.context.MathJax) this.typeset(forceUpdate)
   }
 
@@ -28,9 +26,6 @@ class Node extends React.Component {
    * Prevent update when the source has not changed
    */
   shouldComponentUpdate(nextProps, nextState, nextContext) {
-    console.log('MathJax.Node should update ?')
-    console.log(nextContext.MathJax !== this.context.MathJax)
-    console.log(nextContext.MathJax)
     return (
       nextProps.children !== this.props.children ||
       nextProps.inline !== this.props.inline ||
@@ -110,7 +105,7 @@ class Node extends React.Component {
   }
 
   render() {
-      return React.createElement('span', { ref: 'node' })
+      return React.createElement('span', { ref: 'node' }, this.props.children)
   }
 }
 
