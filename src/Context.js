@@ -50,7 +50,7 @@ class Context extends React.Component {
 
       this.setState({
         loaded: true,
-        Mathjax
+        MathJax
       })
     })
 
