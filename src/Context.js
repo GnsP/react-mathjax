@@ -66,7 +66,7 @@ class Context extends React.Component {
   render() {
     const children = this.props.children
 
-    if (!this.state.loaded && !this.props.noGate) {
+    if (!this.state.loaded) {
       return <div>{children}</div>
     }
 
