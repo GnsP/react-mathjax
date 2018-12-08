@@ -64,11 +64,11 @@ class Context extends React.Component {
   }
 
   render() {
-    if (!this.state.loaded && !this.props.noGate) {
-      return this.props.loading
-    }
-
     const children = this.props.children
+
+    if (!this.state.loaded && !this.props.noGate) {
+      return <div>{children}</div>
+    }
 
     return React.Children.only(children)
   }
