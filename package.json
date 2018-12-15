@@ -1,11 +1,11 @@
 {
-  "name": "react-mathjax2",
-  "version": "0.0.2",
+  "name": "react-mathjax-noblock",
+  "version": "0.0.1",
   "description": "React component for MathJax",
   "main": "./lib/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wko27/react-mathjax.git"
+    "url": "git+https://github.com/GnsP/react-mathjax.git"
   },
   "scripts": {
     "build": "babel --out-dir ./lib ./src"
@@ -25,9 +25,9 @@
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/wko27/react-mathjax/issues"
+    "url": "https://github.com/GnsP/react-mathjax/issues"
   },
-  "homepage": "https://github.com/wko27/react-mathjax#readme",
+  "homepage": "https://github.com/GnsP/react-mathjax#readme",
   "dependencies": {
     "load-script": "^1.0.0",
     "prop-types": "^15.6.0",

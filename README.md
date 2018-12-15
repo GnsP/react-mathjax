@@ -1,4 +1,4 @@
-# React MathJax
+# React MathJax Noblock
 
 [![npm version](https://badge.fury.io/js/react-mathjax2.svg)](https://badge.fury.io/js/react-mathjax2)
 
@@ -8,7 +8,7 @@ React component to display math formulas written in AsciiMath or TeX.
 
 ## Install
 ```
-npm install react-mathjax2 --save
+npm install react-mathjax-noblock --save
 ```
 
 ## Usage
@@ -16,7 +16,7 @@ npm install react-mathjax2 --save
 # Inline display of AsciiMath wrapped in delimiters
 
 ```jsx
-import MathJax from 'react-mathjax2'
+import MathJax from 'react-mathjax-noblock'
 
 const ascii = 'U = 1/(R_(si) + sum_(i=1)^n(s_n/lambda_n) + R_(se))'
 const content = `This can be dynamic text (e.g. user-entered) text with ascii math embedded in $$ symbols like $$${ascii}$$`
@@ -50,7 +50,7 @@ module.exports = () => {
 # Inline display of AsciiMath without delimiters
 
 ```jsx
-import MathJax from 'react-mathjax2'
+import MathJax from 'react-mathjax-noblock'
 
 const ascii = 'U = 1/(R_(si) + sum_(i=1)^n(s_n/lambda_n) + R_(se))'
 
@@ -70,7 +70,7 @@ module.exports = () => {
 # Block display of AsciiMath
 
 ```jsx
-import MathJax from 'react-mathjax2'
+import MathJax from 'react-mathjax-noblock'
 
 const ascii = 'U = 1/(R_(si) + sum_(i=1)^n(s_n/lambda_n) + R_(se))'
 
@@ -90,7 +90,7 @@ module.exports = () => {
 # Inline display of LaTeX
 
 ```jsx
-import MathJax from 'react-mathjax2'
+import MathJax from 'react-mathjax-noblock'
 
 const tex = `f(x) = \\int_{-\\infty}^\\infty\\hat f(\\xi)\\,e^{2 \\pi i \\xi x}\\,d\\xi`
 
@@ -110,7 +110,7 @@ module.exports = () => {
 # Block display of LaTeX
 
 ```jsx
-import MathJax from 'react-mathjax2'
+import MathJax from 'react-mathjax-noblock'
 
 const tex = `f(x) = \\int_{-\\infty}^\\infty\\hat f(\\xi)\\,e^{2 \\pi i \\xi x}\\,d\\xi`
 
@@ -154,11 +154,8 @@ module.exports = () => {
 #### `onError` (Function)
 - Triggered when any [Math Processing Error](http://docs.mathjax.org/en/latest/advanced/debugging-tips.html#add-listener-for-mathjax-errors) occurs
 
-#### `noGate` (Boolean)
-- Defaults to `false`, controls whether to disallow rendering of children components until the MathJax script has finished loading
-
 ## Acknowledgements
-- This project was forked from [MatejMazur](https://github.com/MatejMazur) ([react-mathjax](https://github.com/MatejMazur/react-mathjax)).
+- This project was forked from [wko27](https://github.com/wko27) ([react-mathjax](https://github.com/wko27/react-mathjax)).
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
