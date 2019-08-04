@@ -33,8 +33,8 @@ class Context extends React.Component {
   }
 
   onLoad() {
-    const options = this.props.options
-
+    const options = Object.assign({}, this.props.options, { TeX: { extensions: ["[mhchem]/mhchem.js"] }})
+    MathJax.Ajax.config.path["mhchem"] = "https://cdnjs.cloudflare.com/ajax/libs/mathjax-mhchem/3.3.2"
     MathJax.Hub.Config(options)
 
     MathJax.Hub.Register.StartupHook('End', () => {
