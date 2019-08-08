@@ -63,11 +63,6 @@ class Context extends React.Component {
 
   render() {
     const children = this.props.children
-
-    if (!this.state.loaded) {
-      return <div>{children}</div>
-    }
-
     return React.Children.only(children)
   }
 }
